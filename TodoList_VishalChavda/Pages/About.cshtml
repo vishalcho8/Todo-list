@@ -1,0 +1,95 @@
+﻿@page
+@model TodoList_VishalChavda.Pages.AboutModel
+@{
+}
+
+<head>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+
+        html {
+          box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          margin: 8px;
+        }
+
+        .about-section {
+          padding: 50px;
+          text-align: center;
+          background-color: #474e5d;
+          color: white;
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .title {
+          color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+        <h1>Welcome to Todo community</h1>
+        <p>We build technologies that help people create their own Todo list and keep track of their daily or regular tasks.</p>
+    </div>
+
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Vishal Chavda</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>vishal@hotmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Jethalal Gada</h2>
+                    <p class="title">Software Developer</p>
+                    <p>Jethiya@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Babita Iyyer</h2>
+                    <p class="title">Designer</p>
+                    <p>Babita@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -5,10 +5,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Todo Details</h1>
 
 <div>
-    <h4>Todo</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -38,6 +37,5 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Todo.TodoId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <p><a asp-page="./Edit" asp-route-id="@Model.Todo.TodoId">Edit</a> | <a asp-page="./Index">Back to Todo list</a> | <a asp-page="/Index">Home</a></p>
 </div>

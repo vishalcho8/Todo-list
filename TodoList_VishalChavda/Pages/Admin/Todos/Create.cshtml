@@ -5,9 +5,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Todo</h1>
 
-<h4>Todo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -41,7 +40,10 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <form method="get">
+        <p><a asp-page="./Index">View Todos</a> | <a asp-page="/Index">Home</a></p>
+    </form>
+        
 </div>
 
 @section Scripts {

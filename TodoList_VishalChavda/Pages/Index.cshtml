@@ -4,12 +4,43 @@
     ViewData["Title"] = "Todo List";
 }
 
+<style>
+    .button {
+        width: 150px;
+        height: 75px;
+        padding: 16px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    }
+
+    .button-AddTodo {
+        background-color: #4CAF50;
+        color: black;
+        border: 2px solid #4CAF50;
+    }
+
+    .button-ViewTodo {
+        background-color: #008CBA;
+        color: black;
+        border: 2px solid #008CBA;
+    }
+
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Todo community</h1>
+    <p>Learn about <a asp-page="/About">Todo Community</a>.</p>
 </div>
 
 
 <form method="get">
-    <button type="submit" asp-page="/Admin/Todos/Create">Add Todo</button>
+    <div>
+        <h5>Please use below buttons to Create, view, and Edit Todos. </h5>
+        <hr />
+        <button class="button button-AddTodo" type="submit" asp-page="/Admin/Todos/Create">Add Todo</button>
+        <br />
+        <button class="button button-ViewTodo" type="submit" asp-page="/Admin/Todos/Index">View/Edit Todo</button>
+    </div>
 </form>
+
