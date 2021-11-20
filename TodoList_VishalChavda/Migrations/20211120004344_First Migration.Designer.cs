@@ -10,7 +10,7 @@ using TodoList_VishalChavda.Data;
 namespace TodoList_VishalChavda.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20211118233401_First Migration")]
+    [Migration("20211120004344_First Migration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,7 @@ namespace TodoList_VishalChavda.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CompletionDate")
+                    b.Property<DateTime?>("CompletionDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -38,6 +38,7 @@ namespace TodoList_VishalChavda.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 

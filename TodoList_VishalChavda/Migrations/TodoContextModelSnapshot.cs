@@ -26,7 +26,7 @@ namespace TodoList_VishalChavda.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CompletionDate")
+                    b.Property<DateTime?>("CompletionDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -36,6 +36,7 @@ namespace TodoList_VishalChavda.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 

@@ -13,10 +13,10 @@ namespace TodoList_VishalChavda.Migrations
                 {
                     TodoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IsDone = table.Column<bool>(type: "bit", nullable: false),
-                    CompletionDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CompletionDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
