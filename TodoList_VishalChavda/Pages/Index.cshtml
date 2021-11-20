@@ -4,6 +4,7 @@
     ViewData["Title"] = "Todo List";
 }
 
+@* Adding styles to the page. *@
 <style>
     .button {
         width: 150px;
@@ -26,14 +27,16 @@
         color: black;
         border: 2px solid #008CBA;
     }
-
 </style>
 <div class="text-center">
     <h1 class="display-4">Welcome to Todo community</h1>
     <p>Learn about <a asp-page="/About">Todo Community</a>.</p>
 </div>
 
-
+@* 
+    Following code will create form with two buttons. which will be used 
+    to navigate to pages hat will allow to create or edit the existing todos.\
+*@
 <form method="get">
     <div>
         <h5>Please use below buttons to Create, view, and Edit Todos. </h5>
